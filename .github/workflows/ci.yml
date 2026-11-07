@@ -12,6 +12,7 @@ on:
 jobs:
   Test-Coverage:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
 
     - name: Checkout dev branch
@@ -176,6 +177,7 @@ jobs:
 
   Pytest:
     runs-on: ubuntu-22.04
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -234,6 +236,7 @@ jobs:
 
   pre-commit-checks:
     runs-on: ubuntu-22.04
+    timeout-minutes: 15
     strategy:
       fail-fast: false
     steps:
